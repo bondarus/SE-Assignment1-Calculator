@@ -20,5 +20,47 @@ public class Main {
             allMatches.add(m.group());
         }
         System.out.println(Arrays.toString(allMatches.toArray()));
+        boolean valid = isValid(allMatches);
+        if(valid)
+        {
+            System.out.println("The expression is valid");
+
+        }
+        else
+        {
+            System.err.println("The expression is invalid");
+        }
+    }
+
+    public static boolean isValid(ArrayList<String> matches)
+    {
+        int j = 0;
+        while(j < matches.size())
+        {
+            if(j % 2 == 0 || j == 0)
+            {
+                try {
+                    Integer.parseInt(matches.get(j));
+                    if(j == matches.size()-1) return true;
+                } catch(NumberFormatException e) {
+                    System.err.println("Error: Input expression is invalid");
+                    j = matches.size();
+                }
+                j++;
+            }
+            else
+            {
+                if((matches.get(j)).equals("*") || (matches.get(j)).equals("+") || (matches.get(j)).equals("-"))
+                {
+                    j++;
+                }
+                else
+                {
+                    System.err.println("Error: Invalid operator used");
+                    j = matches.size();
+                }
+            }
+        }
+        return false;
     }
 }
