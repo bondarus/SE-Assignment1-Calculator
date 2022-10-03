@@ -136,4 +136,8 @@ public class Main {
         }
         return false;
     }
+
+    public void test(){
+        System.out.print("Test works");
+    }
 }
