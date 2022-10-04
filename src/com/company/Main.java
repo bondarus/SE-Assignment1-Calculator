@@ -33,6 +33,11 @@ public class Main {
 
     public static boolean isValid(ArrayList<String> matches)
     {
+        if(matches.size() < 3)
+        {
+            System.err.println("Error: expression cannot be calculated");
+            return false;
+        }
         int j = 0;
         while(j < matches.size())
         {
@@ -77,14 +82,10 @@ public class Main {
                 int val1 = Integer.parseInt(allMatches.get(i-1));
                 int val2 = Integer.parseInt(allMatches.get(i+1));
                 currentVal = val1 * val2;
-                System.out.println("\n" + val1 + " * " + val2 + " = " + currentVal);
-                System.out.println("Current Value: " + currentVal);
                 if(allMatches.size() > 3) {
                     allMatches.set(i,Integer.toString(currentVal));
                     allMatches.remove(i+1);
                     allMatches.remove(i-1);
-                    System.out.println("Current Size: " + allMatches.size());
-                    System.out.println("Current List: " + Arrays.toString(allMatches.toArray()));
                     i = -1;
                 }
                 else {
@@ -102,14 +103,10 @@ public class Main {
                 int val1 = Integer.parseInt(allMatches.get(i-1));
                 int val2 = Integer.parseInt(allMatches.get(i+1));
                 currentVal = val1 + val2;
-                System.out.println("\n" + val1 + " + " + val2 + " = " + currentVal);
-                System.out.println("Current Value: " + currentVal);
                 if(allMatches.size() > 3) {
                     allMatches.set(i,Integer.toString(currentVal));
                     allMatches.remove(i+1);
                     allMatches.remove(i-1);
-                    System.out.println("Current Size: " + allMatches.size());
-                    System.out.println("Current List: " + Arrays.toString(allMatches.toArray()));
                     i = -1;
                 }
                 else {
@@ -122,14 +119,10 @@ public class Main {
                 int val1 = Integer.parseInt(allMatches.get(i-1));
                 int val2 = Integer.parseInt(allMatches.get(i+1));
                 currentVal = val1 - val2;
-                System.out.println("\n" + val1 + " - " + val2 + " = " + currentVal);
-                System.out.println("Current Value: " + currentVal);
                 if(allMatches.size() > 3) {
                     allMatches.set(i,Integer.toString(currentVal));
                     allMatches.remove(i+1);
                     allMatches.remove(i-1);
-                    System.out.println("Current Size: " + allMatches.size());
-                    System.out.println("Current List: " + Arrays.toString(allMatches.toArray()));
                     i = -1;
                 }
                 else {
