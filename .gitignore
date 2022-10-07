@@ -1,6 +1,6 @@
 # Default ignored files
 /shelf/
-/workspace.xml
-*.xml
-*.html
-/SE-Assignment1-Calculator.iml
+#/workspace.xml
+#*.xml
+#*.html
+#/SE-Assignment1-Calculator.iml
