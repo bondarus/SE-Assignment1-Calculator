@@ -8,7 +8,10 @@ import java.util.regex.Pattern;
 
 public class Main {
 
+    public static int result;
+
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an expression you want to calculate: ");
         String str = input.nextLine();
@@ -23,12 +26,14 @@ public class Main {
         boolean valid = isValid(allMatches);
         if(valid)
         {
-            calculate(allMatches);
+            result = calculate(allMatches);
+            System.out.println("Result: " + result);
         }
         else
         {
             System.err.println("The expression is invalid");
         }
+
     }
 
     public static boolean isValid(ArrayList<String> matches)
@@ -68,7 +73,7 @@ public class Main {
         return false;
     }
 
-    public static void calculate(ArrayList<String> allMatches)
+    public static Integer calculate(ArrayList<String> allMatches)
     {
         int currentVal = 0;
         int i = 0;
@@ -96,9 +101,9 @@ public class Main {
             i++;
         }
         i = 0;
-        while(!exit2)
+        while(!exit2 && i < allMatches.size())
         {
-            if((allMatches.get(i)).equals("+") && allMatches.size() >= 3)
+            if(allMatches.size() >= 3 && (allMatches.get(i)).equals("+"))
             {
                 int val1 = Integer.parseInt(allMatches.get(i-1));
                 int val2 = Integer.parseInt(allMatches.get(i+1));
@@ -132,10 +137,6 @@ public class Main {
             }
             i++;
         }
-        System.out.println("Result: " + currentVal);
-    }
-
-    public void test(){
-        System.out.print("Test works");
+        return  currentVal;
     }
 }
