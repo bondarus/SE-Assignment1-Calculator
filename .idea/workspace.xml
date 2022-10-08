@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c798bdc6-ecb3-4b45-afd9-29368beb4baa" name="Changes" comment="Removed prints for debugging, added another edge case">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c798bdc6-ecb3-4b45-afd9-29368beb4baa" name="Changes" comment="Configure .gitignore to add other files">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SE-Assignment1-Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SE-Assignment1-Calculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664908716299</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Configure .gitignore to add other files">
+      <created>1665171262853</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665171262854</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +245,7 @@
     <MESSAGE value="Update: calculates and prints the expression" />
     <MESSAGE value="Made calculations in a function" />
     <MESSAGE value="Removed prints for debugging, added another edge case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed prints for debugging, added another edge case" />
+    <MESSAGE value="Configure .gitignore to add other files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure .gitignore to add other files" />
   </component>
 </project>
